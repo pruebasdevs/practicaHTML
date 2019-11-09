@@ -1,0 +1,99 @@
+body {
+    background-color:powderblue;
+}
+h1 {
+    font-size: 300%;
+    margin: 30px;
+    display: block;
+    color: black;
+    padding: 40px;
+}
+h2 {
+    font-size: 28px;
+    margin: 40px;
+    display: block;
+    color: purple;
+    padding: 60px;
+}
+
+header {
+    display: block;
+    width: 100%;
+    margin: 16px;
+}
+
+form {
+    font-size: 30px;
+    color: grey;
+    display: block;
+    padding: 160px;
+    margin: 20px auto;
+    text-align: justify;
+} 
+nav {
+    position: fixed;
+    right: 0;
+    width: 20%;
+    /* Posicionamos la cabecera al lado izquierdo */ 
+    top: 5;
+    /* Posicionamos la cabecera pegada arriba */
+}
+
+logo {
+    padding: 22.5px 0px 0px 10px;
+    top: 0;
+}
+section {
+    width: 80%;
+}
+
+#localizacion {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: red;
+}
+
+#err {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: red;
+}
+
+#btnLocate {
+    font-size:18pt
+}
+
+.center {
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.media-font {
+    font-size:18pt;
+}
+
+.myStyle1 {
+    display: block;
+    blackground-color: #ffffff;
+    font-size: 25px;
+    text-align: left;
+    list-style-position: inside;
+}
+
+.myStyle2 {
+    display: block;
+    blackground-color: #ffffff;
+    color: grey;
+    padding: 50px;
+    font-size: 15px;
+}
+
+.cajaBlanca {
+    font-size: 28px;
+    background-color: white;
+    margin: 50px;
+    display: block;
+    padding: 80px;
+}

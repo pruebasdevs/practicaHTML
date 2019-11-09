@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Título de prueba</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<logo id="Inicio">
+		<div class="center">
+			<img class="img-fluid" src="img/LogoPractica.png" alt="" usemap="#enlacesUDC">
+			<map name="enlacesUDC">
+				<area shape="rect" coords="480,175,686,217" alt="IGM"
+					href="https://guiadocente.udc.es/guia_docent/index.php?centre=614&ensenyament=614502&assignatura=614502008&any_academic=2019_20">
+				<area shape="circle" coords="180,222,50" alt="UDC" href="https://www.udc.es/">
+			</map>
+		</div>
+	</logo>
+	<nav>
+		<li><a href="#Inicio">Inicio</a></li><br>
+		<li><a href="#Artículo1">Artículo con formulario</a></li><br>
+		<li><a href="#Artículo2">Artículo con video youtube</a></li><br>
+		<li><a href="#Artículo3">Artículo con video local</a></li><br>
+	</nav>
+	<article id="Artículo1">
+		<h1>Form:</h1>
+		<section>
+			<h2> Explicación </h2>
+			<p class="cajaBlanca myStyle2">
+				f
+			</p>
+		</section>
+		<section>
+			<h2> Formulario </h2>
+			<form autofocus="quality">
+				<label for="btnLocate">Obten las coordenadas</label></p>
+				<button id="btnLocate" onclick="getLocation()"> Obtener coordenadas</button>
+				<p id="localizacion" class="media-font"></p>
+				<script>
+					var x = document.getElementById("localizacion");
+					function getLocation() {
+						if (navigator.geolocation) {
+							navigator.geolocation.watchPosition(showPosition);
+						} else {
+							x.innerHTML = "Geolocation is not supported by this browser.";
+						}
+					}
+					function showPosition(position) {
+						x.innerHTML = "Latitude: " + position.coords.latitude +
+							"<br>Longitude: " + position.coords.longitude;
+					}
+				</script>
+				</p>
+				<p>
+					<label for="full_name">Nombre completo:</label>
+					<input type="text" id="full_name" name="full_name" placeholder="Estela Surís" class="media-font"
+						required>
+				</p>
+				<p>
+					<label for="email_addr">Dirección de correo:</label>
+					<input type="email" id="email_addr" name="email_addr" class="media-font" required>
+				</p>
+				<p>
+					<label for="email_addr_repeat">Repetir dirección de correo</label>
+					<input type="email" id="email_addr_repeat" name="email_addr_repeat" class="media-font" required
+						oninput="check(this)">
+				</p>
+				<p>
+					<label for="born_dt">Fecha de nacimiento</label>
+					<input type="date" id="born_dt" name="born" class="media-font" required>
+				</p>
+				<p>
+					<label for="quality">Indique la nota que le da (1-10) al anterior articulo</label>
+					<input type="number" id="quality" name="mark" value="10" min="1" max="10" class="media-font"
+						autofocus required>
+				</p>
+				<button onclick="store()" type="button">Enviar Opinion</button>
+				<br>
+				<input type="text" id="err" value="">
+				<script>
+					function check(input) {
+						if (input.value != document.getElementById('email_addr').value) {
+							input.setCustomValidity('Los correos introducidos deben coincidir.');
+						} else {
+							input.setCustomValidity('');
+						}
+					}
+					function store() {
+						var log = document.getElementById("login");
+						if (log == 'no') { //let the form be sent 
+							localStorage.setItem("login", 'yes');
+						}
+						else {
+
+							err.value = "Ya has dado tu opinión";
+						}
+					}
+				</script>
+			</form>
+		</section>
+	</article>
+	<article id="Artículo2">
+		<h1>Youtube video:</h1>
+		<section>
+			<h2> Explicación </h2>
+			<p class="cajaBlanca myStyle2">
+				f
+			</p>
+		</section>
+		<section>
+			<h2> Tercero apartado </h2>
+			<div class="center">
+				<iframe width="640" height="360" src="https://www.youtube.com/embed/lHoYjBC-f9U" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media;" allowfullscreen>
+					<track kind="subtitles" label="English subtitles" src="subtitles_en.vtt" srclang="en" mode="showing"
+						default>
+					</track>
+					<track crossorigin="anonymous" kind="subtitles" label="Deutsche Untertitel" src="subtitles_de.vtt"
+						srclang="de">
+					</track>
+				</iframe>
+			</div>
+		</section>
+	</article>
+	<article id="Artículo3">
+		<h1>Local video:</h1>
+		<section>
+			<h2> Explicación </h2>
+			<p class="cajaBlanca myStyle2">
+				f
+			</p>
+		</section>
+		<section>
+			<div class="center">
+					<video id="video1" width="640" height="360" frameborder="0" controls
+					class="trackSupported"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+					<source src="img/piggy.mp4" type="video/mp4"></source>
+					<track crossorigin="anonymous" src="http://4gp.me/bbtc/157333278834.txt" kind="caption" srclang="en" label="English"></track>
+					<track crossorigin="anonymous" src="http://4gp.me/bbtc/157333278834.txt" kind="subtitles" label="English" srclang="en"
+						default></track>
+
+				</video>
+			</div>
+			<br>
+		</section>
+	</article>
+
+</body>
+
+</html>
+
+</html>
