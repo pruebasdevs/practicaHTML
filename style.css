@@ -76,7 +76,7 @@ section {
 
 .myStyle1 {
     display: block;
-    blackground-color: #ffffff;
+    background-color: #ffffff;
     font-size: 25px;
     text-align: left;
     list-style-position: inside;
@@ -84,7 +84,7 @@ section {
 
 .myStyle2 {
     display: block;
-    blackground-color: #ffffff;
+    background-color: #ffffff;
     color: grey;
     padding: 50px;
     font-size: 15px;
